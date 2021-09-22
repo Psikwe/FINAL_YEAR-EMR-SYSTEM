@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Font Awesome-->
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="/public/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATU EMR</title>
+</head>
+<body>
+    <div>
+        <form action="/users/register" method="post">
+            <div class="row">
+                <div class="col s6 offset-s3">
+                    <div class="card z-depth-4">
+                        <div class="card-content grey black-text">
+                            <span class="center-align card-title">Welcome To ATU EMR</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="input-field">
+                                <i class="material-icons prefix">person</i>
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" class="autocomplete"
+                                    value="<%= typeof name != 'undefined' ? name : '' %>" />
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="autocomplete"
+                                 value="<%= typeof email != 'undefined' ? email : '' %>" />
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">lock</i>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" class="autocomplete"
+                                    value="<%= typeof password != 'undefined' ? password : '' %>" />
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">lock</i>
+                                <label for="password2">Confirm Password</label>
+                                <input type="password" id="password2" name="password2" class="autocomplete"
+                                    value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+                            </div>
+                            <button type="submit" class="waves-effect waves-light btn">Sign up</button><br><br><br>
+                            <p>Have An Account? <a href="/users/login">Login</a></p>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Jquery at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body text-center">
+            <h1><i class="fab fa-node-js fa-3x"></i></h1>
+            <p>Create an account or login</p>
+            <a href="/users/register" class="btn btn-primary btn-block mb-2"
+            >Register</a
+            >
+            <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+        </div>
+    </div>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Font Awesome-->
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ATU EMR</title>
+</head>
+<body>
+
+    <div class="loginForm container">
+        <h5>ACCRA TECHNICAL UNIVERSITY EMR LOGIN</h5>
+        <form action="/login" method="post">
+            <div class="row">
+                <div class="col s6">
+                    <div class="card z-depth-4">
+                        <div class="card-content grey black-text">
+                            <span class="center-align card-title">Welcome To ATU EMR</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="input-field">
+                                <i class="material-icons prefix">person</i><!--insert_comment-->
+                                <input name="username" type="text" id="username">
+                                <label for="username">Username</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">lock</i>
+                                <input name="password" type="password" id="password">
+                                <label for="password">Enter Password</label>
+                            </div>
+                            <div class="check">
+                                <label>
+                                    &nbsp;<input type="checkbox" />
+                                    <span>Remember Password</span>
+                                </label>
+                            </div><br>
+                            <button type="submit" class="waves-effect waves-light btn">Login</button>
+                            <p>Don't have an account?</p>
+                            <button type="submit" class="waves-effect waves-light btn">Sign Up</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+
+
+
+    
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Jquery at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

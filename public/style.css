@@ -1,0 +1,10 @@
+#body-wrapper {
+  width: 100%;
+}
+#top-nav {
+  height: 20px;
+}
+#footer {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+}

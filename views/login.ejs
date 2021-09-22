@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Font Awesome-->
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATU EMR</title>
+</head>
+<body>
+    <div id="body-wrapper">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo" id="top-nav">
+                    <img class="logo-resize" src="/images/atu_logo (2).png" alt="School Logo"style="height: 85px; width: 110px;">
+                </a>
+            </div>
+        </nav>
+        <div class="loginForm">
+            <form action="/login" method="post">
+                <div class="row">
+                    <div class="col s6 offset-s3">
+                        <div class="card z-depth-4">
+                            <div class="card-content grey black-text">
+                                <span class="center-align card-title">Welcome To ATU EMR</span>
+                            </div>
+        
+                            <div class="card-content">
+                                <div class="input-field">
+                                    <i class="material-icons prefix">person</i>
+                                    <select id="DDL">
+                                        <option value="" selected Disabled>Select Position</option>
+                                        <option value="2">Doctor</option>
+                                        <option value="1">Nurse</option>
+                                        <option value="2">Lab Technician</option>
+                                    </select>
+                                    <label for="">Position</label>
+                                </div>
+                                <div class="input-field">
+                                    <i class="material-icons prefix">email</i>
+                                    <label for="email">Enter Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" />
+                                </div>
+        
+                                <div class="input-field">
+                                    <i class="material-icons prefix">lock</i>
+                                    <label for="password">Enter Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" />
+                                </div>
+                                <button type="submit" class="waves-effect waves-light btn">Login</button><br><br><br>
+                                <!-- <p class="lead mt-4">Don't have n Account? <a href="/register">Signup></a></p> -->
+        
+                                <p class="lead mt-4">Don't have an Account? <a href="/users/register">Signup</a></p>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="page-footer" id="footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © Copyright 2021. ATU EMR SYSTEM. All rights reserved. l Terms of use l Privacy Policy
+                <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+            </div>
+        </div>
+    </div>
+    <!--Javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Jquery at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/public/main.js"></script>
+    <script>
+        //input-field
+        document.addEventListener('DOMContentLoaded', function () {
+            var sel = document.querySelectorAll('select');
+            M.FormSelect.init(sel)
+        });
+        //switch-check-field activation
+        function Enableddl(chkddl) {
+            console.log(chkddl)
+            var ddl = document.querySelector('DDL');
+            //var ddl=document.getElementById("DDL");
+            ddl.disabled = chkddl.checked ? false : true;
+            if (!ddl.disabled) {
+                ddl.focus();
+            }
+        }
+    </script>
+</body>
+</html>
+
